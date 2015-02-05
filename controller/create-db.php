@@ -6,8 +6,17 @@
   if($connection->connect_error) {
       die("Error: " . $connection->connect_error);
   }
-   else {
-       echo "Success" . $connection->host_info;
-   }
+$exist = $connection->select_db($database);
    
+if(!$exist) {
+    $query = $connection->query("CREATE DATABASE $database");
+
+    if($query) {
+        echo "Successfully created database: " . $database;
+    } 
+}
+else {
+    echo "Database already exists.";
+}
+
    $connection->close();
