@@ -1,8 +1,19 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+   require_once(__DIR__ . "/../model/config.php");
+   
+   $connection = new mysqli($host, $username, $password, $database);
+   
+   $title =  filter_input(INPUT_POST, "title", FILTER_SANITIZE_STRING);
+   $post = filter_input(INPUT_POST, "post", FILTER_SANITIZE_STRING);
+   
+   $query = $connection->query("INSERT INTO posts SET title = '$title', post =)
+       
+if($query) {
+    echo "<p>Successfully inserted post: $title</p>";
+        
+else {
+   echo "<p>$connection->error</p>";
+       
+}
+           $connection->close();
 
