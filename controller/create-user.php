@@ -9,4 +9,6 @@
    
    $salt = "$5$" . "rounds=5000$" . uniqid(mt_rand(), true) . "$";
    
-   echo $salt;
+   $hashedPassword = crypt(password, $salt);
+   
+   $query = $_SESSION["connection"]->query("INSERT INTO");
