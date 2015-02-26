@@ -11,4 +11,16 @@
    
    $hashedPassword = crypt(password, $salt);
    
-   $query = $_SESSION["connection"]->query("INSERT INTO");
+   $query = $_SESSION["connection"]->query("INSERT INTO users SET"
+            . "email = '$email',"
+            . "username = 'username',"
+            . "password = 'password',"
+            . "salt = 'salt'");
+   
+   if($query) {
+       echo "Successfully created user: $username";
+   }
+     else {
+         echo "<p>" . $_SESSION["connection"]->error . "</p>";
+     }  
+   

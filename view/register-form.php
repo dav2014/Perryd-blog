@@ -1,8 +1,21 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+require_once(__DIR__ . "/../model/config.php");
+?>
 
+<h1>Register</h>
+
+<form method="post" action="<?php echo $path . "controller/create-user.php"; ?>
+    <div>
+    <label for="email">Email: </label>
+<input type="text" name="email" />
+     </div> 
+     
+     <div>
+         <label for="username">Username: </label>
+         <input type="text" name="username" />
+     </div>
+     
+     <div> 
+         <label for="password>Password: </label>
+         <input type
