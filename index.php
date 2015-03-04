@@ -1,3 +1,4 @@
+<!--my careacile and bootstrap-->
 <link type="text/css" rel="stylesheet" href="bootstrap-3.3.2-dist/css/bootstrap.css">
 <link type="text/css" rel="stylesheet" href="bootstrap-3.3.2-dist/css/bootstrap.min.css">
 <link type="text/css" rel="stylesheet" href="view/custom-style.css">
