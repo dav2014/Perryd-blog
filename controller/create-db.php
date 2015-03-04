@@ -1,5 +1,5 @@
 <?php
-   require_once("/../model/database.php");
+   require_once("/../model/config.php");
    
     $query = $connection->query("CREATE TABLE posts ("
            . "id int(11) NOT NULL AUTO_INCREMENT,"
